@@ -1,0 +1,12 @@
+The generated datasets and result CSVs in this directory are released under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+    https://creativecommons.org/licenses/by/4.0/
+
+They are synthetic: every file here is produced by the code in this repository
+from a configuration and an integer seed, and contains no data about any real
+person. The code itself is under the MIT License (see ../LICENSE).
+
+Attribution: fog, "When Should Authority Follow
+Interaction? A Regime Boundary for Shared Entities in Peer-to-Peer Networked
+Virtual Environments", ICOIN 2027.

@@ -1,0 +1,9 @@
+assignment,policy_id,n_seeds,request_imbalance_mean,request_imbalance_std,peak_window_imbalance_mean,peak_window_imbalance_std,mean_latency_ms_mean
+distinct,static,30,4.114272,1.197658,5.023917,1.176865,98.818510
+distinct,nearest,30,4.599721,1.542888,5.495009,1.501829,100.718735
+distinct,follow_d0.0,30,3.549041,0.166883,4.465811,0.350172,29.517331
+distinct,follow_d1.0,30,3.507157,0.187225,4.465803,0.349556,31.171345
+shared,static,30,4.114272,1.197658,5.023917,1.176865,94.866275
+shared,nearest,30,4.599721,1.542888,5.495009,1.501829,94.077529
+shared,follow_d0.0,30,9.850948,0.064952,10.000000,0.000000,29.858495
+shared,follow_d1.0,30,9.621893,0.120905,10.000000,0.000000,31.413113

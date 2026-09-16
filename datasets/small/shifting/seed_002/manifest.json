@@ -1,0 +1,70 @@
+{
+  "created_at": "2026-08-31T00:00:00Z",
+  "dataset_id": "small-shifting-seed-002",
+  "dataset_kind": "controlled synthetic workload",
+  "duration": 60.0,
+  "entity_count": 3,
+  "generator_version": "0.2.0",
+  "input_sha256": {
+    "entities.csv": "43a2b49224a80c264986d89df19aa033113936c29baba958d4ae83d02a016086",
+    "interactions.csv": "5a10872ea16ae340e74ce62434380f57f9c860930df079aad2e50a56687573bf",
+    "network.csv": "872d74e29adccb9fef61044dd70f89d96ce09033d518c6b11709b3736bf7d962",
+    "peer_positions.csv": "236e15d19ae867690424faa3df3a3f5ba92c12ba9bd62b057981e0605217a4b7",
+    "peers.csv": "98ea27c44c9fd5751b2654fe1bc0cc019f6e06e42d83be89589d70dbf23b12d0",
+    "request_types.csv": "fac7e96b3404c3300541b57f6e74677025cfc673c899863fac984c1dff12c103"
+  },
+  "interaction_model": "poisson",
+  "interaction_rate_per_entity": 2.0,
+  "movement_model": "random_walk",
+  "network_model": "heterogeneous",
+  "peer_count": 10,
+  "position_sample_count": 61,
+  "position_sample_interval": 1.0,
+  "processing_delay_ms": 2.0,
+  "rtt_range_ms": [
+    10.0,
+    200.0
+  ],
+  "scenario": "shifting",
+  "scenario_parameters": {
+    "dominant_peer_by_entity": {
+      "E0001": "P0002",
+      "E0002": "P0010",
+      "E0003": "P0007"
+    },
+    "dominant_peer_ratio": 0.85,
+    "phase_duration": 20.0,
+    "phases": [
+      {
+        "dominant_peer_by_entity": {
+          "E0001": "P0002",
+          "E0002": "P0010",
+          "E0003": "P0007"
+        },
+        "end": 20.0,
+        "start": 0.0
+      },
+      {
+        "dominant_peer_by_entity": {
+          "E0001": "P0003",
+          "E0002": "P0001",
+          "E0003": "P0008"
+        },
+        "end": 40.0,
+        "start": 20.0
+      },
+      {
+        "dominant_peer_by_entity": {
+          "E0001": "P0004",
+          "E0002": "P0002",
+          "E0003": "P0009"
+        },
+        "end": 60.0,
+        "start": 40.0
+      }
+    ]
+  },
+  "seed": 2,
+  "state_size_bytes": 4096,
+  "timestep": 0.1
+}

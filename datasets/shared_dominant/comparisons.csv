@@ -1,0 +1,17 @@
+assignment,metric,policy_a,policy_b,n_seeds,mean_diff,bootstrap_ci95_low,bootstrap_ci95_high,verdict
+distinct,request_imbalance,follow_d0.0,static,30,-0.565231,-1.007709,-0.151390,follower_better
+distinct,request_imbalance,follow_d0.0,nearest,30,-1.050681,-1.596179,-0.535380,follower_better
+distinct,request_imbalance,follow_d1.0,static,30,-0.607115,-1.053410,-0.200300,follower_better
+distinct,request_imbalance,follow_d1.0,nearest,30,-1.092564,-1.636592,-0.577766,follower_better
+distinct,peak_window_imbalance,follow_d0.0,static,30,-0.558106,-0.993886,-0.148686,follower_better
+distinct,peak_window_imbalance,follow_d0.0,nearest,30,-1.029198,-1.557969,-0.525581,follower_better
+distinct,peak_window_imbalance,follow_d1.0,static,30,-0.558114,-1.000808,-0.144511,follower_better
+distinct,peak_window_imbalance,follow_d1.0,nearest,30,-1.029206,-1.553408,-0.530911,follower_better
+shared,request_imbalance,follow_d0.0,static,30,5.736676,5.299317,6.120426,follower_worse
+shared,request_imbalance,follow_d0.0,nearest,30,5.251227,4.696550,5.780644,follower_worse
+shared,request_imbalance,follow_d1.0,static,30,5.507621,5.060452,5.895794,follower_worse
+shared,request_imbalance,follow_d1.0,nearest,30,5.022172,4.454116,5.558709,follower_worse
+shared,peak_window_imbalance,follow_d0.0,static,30,4.976083,4.540275,5.364489,follower_worse
+shared,peak_window_imbalance,follow_d0.0,nearest,30,4.504991,3.970613,5.021788,follower_worse
+shared,peak_window_imbalance,follow_d1.0,static,30,4.976083,4.540275,5.364489,follower_worse
+shared,peak_window_imbalance,follow_d1.0,nearest,30,4.504991,3.970613,5.021788,follower_worse

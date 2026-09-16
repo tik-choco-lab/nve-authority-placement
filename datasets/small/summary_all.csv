@@ -1,0 +1,13 @@
+dataset_id,scenario,seed,peer_count,entity_count,duration,interaction_rate_per_entity,network_model,movement_model,total_requests,requests_per_second,dominant_peer_ratio_expected,dominant_peer_ratio_actual,mean_rtt_ms,median_rtt_ms,p95_rtt_ms,valid,path
+small-burst-seed-001,burst,1,10,3,60.0,2.0,heterogeneous,random_walk,358,5.966667,0.9,0.921875,98.686465,87.610010,190.868599,True,datasets/small/burst/seed_001
+small-burst-seed-002,burst,2,10,3,60.0,2.0,heterogeneous,random_walk,373,6.216667,0.9,0.964912,102.302233,96.305208,186.027506,True,datasets/small/burst/seed_002
+small-burst-seed-003,burst,3,10,3,60.0,2.0,heterogeneous,random_walk,329,5.483333,0.9,0.929825,101.088689,93.705974,190.273920,True,datasets/small/burst/seed_003
+small-concentrated-seed-001,concentrated,1,10,3,60.0,2.0,heterogeneous,random_walk,358,5.966667,0.75,0.734637,98.686465,87.610010,190.868599,True,datasets/small/concentrated/seed_001
+small-concentrated-seed-002,concentrated,2,10,3,60.0,2.0,heterogeneous,random_walk,373,6.216667,0.75,0.772118,102.302233,96.305208,186.027506,True,datasets/small/concentrated/seed_002
+small-concentrated-seed-003,concentrated,3,10,3,60.0,2.0,heterogeneous,random_walk,329,5.483333,0.75,0.759878,101.088689,93.705974,190.273920,True,datasets/small/concentrated/seed_003
+small-shifting-seed-001,shifting,1,10,3,60.0,2.0,heterogeneous,random_walk,358,5.966667,0.85,0.868715,98.686465,87.610010,190.868599,True,datasets/small/shifting/seed_001
+small-shifting-seed-002,shifting,2,10,3,60.0,2.0,heterogeneous,random_walk,373,6.216667,0.85,0.857909,102.302233,96.305208,186.027506,True,datasets/small/shifting/seed_002
+small-shifting-seed-003,shifting,3,10,3,60.0,2.0,heterogeneous,random_walk,329,5.483333,0.85,0.866261,101.088689,93.705974,190.273920,True,datasets/small/shifting/seed_003
+small-uniform-seed-001,uniform,1,10,3,60.0,2.0,heterogeneous,random_walk,358,5.966667,,,98.686465,87.610010,190.868599,True,datasets/small/uniform/seed_001
+small-uniform-seed-002,uniform,2,10,3,60.0,2.0,heterogeneous,random_walk,373,6.216667,,,102.302233,96.305208,186.027506,True,datasets/small/uniform/seed_002
+small-uniform-seed-003,uniform,3,10,3,60.0,2.0,heterogeneous,random_walk,329,5.483333,,,101.088689,93.705974,190.273920,True,datasets/small/uniform/seed_003

@@ -1,0 +1,10 @@
+question,knob_value,alpha,policy_a,policy_b,n_seeds,mean_diff_combined_ms,bootstrap_ci95_low,bootstrap_ci95_high,verdict
+proposed_vs_baseline,0.25,0.5,engagement_g00_d1.0,static,30,-6927.941233,-13097.117178,-1452.886272,engagement_g00_d1.0 SIGNIFICANTLY BETTER than static
+proposed_vs_baseline,0.25,0.5,engagement_g00_d1.0,nearest,30,-4279.076584,-11213.451672,2638.743979,not distinguishable from 0 (CI straddles zero)
+proposed_vs_naive,0.25,0.5,engagement_g00_d1.0,naive_target_aware,30,-14438.748193,-16067.140588,-12822.695430,engagement_g00_d1.0 SIGNIFICANTLY BETTER than naive_target_aware
+proposed_vs_baseline,0.25,1.0,engagement_g00_d1.0,static,30,6918.025823,739.058249,12381.490620,engagement_g00_d1.0 SIGNIFICANTLY WORSE than static (dominated)
+proposed_vs_baseline,0.25,1.0,engagement_g00_d1.0,nearest,30,8909.325376,1788.787531,16063.547263,engagement_g00_d1.0 SIGNIFICANTLY WORSE than nearest (dominated)
+proposed_vs_naive,0.25,1.0,engagement_g00_d1.0,naive_target_aware,30,-34661.955080,-36639.831109,-32672.068382,engagement_g00_d1.0 SIGNIFICANTLY BETTER than naive_target_aware
+proposed_vs_baseline,0.25,2.0,engagement_g00_d1.0,static,30,34609.959934,28363.020631,40153.856095,engagement_g00_d1.0 SIGNIFICANTLY WORSE than static (dominated)
+proposed_vs_baseline,0.25,2.0,engagement_g00_d1.0,nearest,30,35286.129298,27702.772471,42933.661330,engagement_g00_d1.0 SIGNIFICANTLY WORSE than nearest (dominated)
+proposed_vs_naive,0.25,2.0,engagement_g00_d1.0,naive_target_aware,30,-75108.368854,-77917.372429,-72154.444931,engagement_g00_d1.0 SIGNIFICANTLY BETTER than naive_target_aware

@@ -1,0 +1,8 @@
+dominant_peer_ratio,cheapest_online_policy,cheapest_online_combined_s,oracle_combined_s,stretch
+0.85,lowest_rtt_w10,129.509623,48.184349,2.687794
+0.7,lowest_rtt_w10,178.704885,74.841763,2.387770
+0.6,proposed_d0.0,206.507539,90.206921,2.289265
+0.5,proposed_d0.0,238.905094,102.738551,2.325370
+0.4,lowest_rtt_w100,252.978826,112.977785,2.239191
+0.3,lowest_rtt_w100,257.641465,120.591286,2.136485
+0.25,lowest_rtt_w100,257.222373,123.871341,2.076529

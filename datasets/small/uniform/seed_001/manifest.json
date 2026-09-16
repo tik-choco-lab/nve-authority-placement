@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-08-31T00:00:00Z",
+  "dataset_id": "small-uniform-seed-001",
+  "dataset_kind": "controlled synthetic workload",
+  "duration": 60.0,
+  "entity_count": 3,
+  "generator_version": "0.2.0",
+  "input_sha256": {
+    "entities.csv": "67a6c5d81f0993fab62732564cffd97e0288991d7a07e3e4f0727302288a4394",
+    "interactions.csv": "4b03122f013de45c5e325ffa24ae244561c760f8f2c5f7d39d46d0dbce17c12d",
+    "network.csv": "6cada798cf7df15c2eccf73a154a1460cd943f50cf74453bb76e875a87eaad1a",
+    "peer_positions.csv": "898119c9f5d6f00a3c21a05abd8424d1cddb6d65dd7790b08f6f1efe536952ba",
+    "peers.csv": "72d13a42f5b4a5c69cc21358bdfb184fa710813190b26f24dbdf0652d62aadda",
+    "request_types.csv": "fac7e96b3404c3300541b57f6e74677025cfc673c899863fac984c1dff12c103"
+  },
+  "interaction_model": "poisson",
+  "interaction_rate_per_entity": 2.0,
+  "movement_model": "random_walk",
+  "network_model": "heterogeneous",
+  "peer_count": 10,
+  "position_sample_count": 61,
+  "position_sample_interval": 1.0,
+  "processing_delay_ms": 2.0,
+  "rtt_range_ms": [
+    10.0,
+    200.0
+  ],
+  "scenario": "uniform",
+  "scenario_parameters": {
+    "dominant_peer_by_entity": {
+      "E0001": "P0004",
+      "E0002": "P0002",
+      "E0003": "P0006"
+    }
+  },
+  "seed": 1,
+  "state_size_bytes": 4096,
+  "timestep": 0.1
+}

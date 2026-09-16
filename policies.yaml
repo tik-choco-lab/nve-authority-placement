@@ -1,0 +1,128 @@
+# Authority placement policies to evaluate.
+#
+# Every research variable here is REQUIRED, never defaulted. A hidden default
+# would silently pick one point of the design space and make the comparison
+# look like a fact rather than a choice. Sweep the variants instead.
+#
+# See docs/POLICY_EVALUATION.md for what each knob means.
+
+evaluation:
+  # Evaluation-side assumptions, NOT dataset facts. The dataset deliberately
+  # leaves payload sizes and bandwidth undecided.
+  request_bytes: 128
+  response_bytes: 128
+  # null => migration_duration_ms is left empty and only bytes + RTT are reported.
+  migration_bandwidth_mbps: null
+
+policies:
+  # ---- no free parameters ----
+  - id: static
+    type: static
+
+  # ---- virtual-space proximity ----
+  - id: nearest_h0
+    type: nearest
+    min_holding_time_s: 0.0
+  - id: nearest_h5
+    type: nearest
+    min_holding_time_s: 5.0
+
+  # ---- network proximity to recent requesters ----
+  # window size 1 is the degenerate case: the answer is always the requester
+  # itself. It is kept so the degeneracy is visible in the results.
+  - id: lowest_rtt_w1
+    type: lowest_rtt
+    window: {type: count, size: 1}
+    use_interaction_weight: false
+    min_holding_time_s: 0.0
+  - id: lowest_rtt_w10
+    type: lowest_rtt
+    window: {type: count, size: 10}
+    use_interaction_weight: false
+    min_holding_time_s: 0.0
+  - id: lowest_rtt_w50
+    type: lowest_rtt
+    window: {type: count, size: 50}
+    use_interaction_weight: false
+    min_holding_time_s: 0.0
+  - id: lowest_rtt_t10s
+    type: lowest_rtt
+    window: {type: time, seconds: 10.0}
+    use_interaction_weight: false
+    min_holding_time_s: 0.0
+  - id: lowest_rtt_all
+    type: lowest_rtt
+    window: {type: all}
+    use_interaction_weight: false
+    min_holding_time_s: 0.0
+
+  # ---- recent interaction share ----
+  - id: interaction_aware_w10
+    type: interaction_aware
+    window: {type: count, size: 10}
+    use_interaction_weight: false
+    min_holding_time_s: 0.0
+  - id: interaction_aware_w50
+    type: interaction_aware
+    window: {type: count, size: 50}
+    use_interaction_weight: false
+    min_holding_time_s: 0.0
+
+  # ---- engagement-aware push (the proposed method, Section 4) ----
+  # World is 1000x1000 with 10 slowly-walking peers (config.yaml), so
+  # relevant_range must be in the hundreds to have any chance of an in-range
+  # candidate at all - a range of a few units would leave every entity
+  # ownerless forever and tell us nothing.
+  #   r250_h05_d2 / r500_h05_d2: same engagement/dwell settings, only the range
+  #     changes, to see how much a tighter relevant range starves the policy
+  #     of in-range candidates versus giving it more room to hold authority.
+  #   r500_h03_d0: lower engagement threshold and zero dwell time, isolating how
+  #     much more eagerly the policy migrates once both the trigger and the
+  #     hysteresis are relaxed.
+  #   r1500_h05_d2: relevant_range bigger than the world diagonal (~1414), so
+  #     RELEASE_OUT_OF_RANGE and the ownerless/candidacy machinery never fire
+  #     at all - this variant isolates the pure demand-push behaviour (steps
+  #     3-7) on its own, with no release/claim noise mixed in.
+  - id: engagement_aware_r250_g05_d2
+    type: engagement_aware
+    target_rule: demand_argmax
+    relevant_range: 250.0
+    engagement_threshold: 0.5
+    dwell_time_s: 2.0
+    window: {type: count, size: 10}
+    use_interaction_weight: false
+  - id: engagement_aware_r500_g05_d2
+    type: engagement_aware
+    target_rule: demand_argmax
+    relevant_range: 500.0
+    engagement_threshold: 0.5
+    dwell_time_s: 2.0
+    window: {type: count, size: 10}
+    use_interaction_weight: false
+  - id: engagement_aware_r500_g03_d0
+    type: engagement_aware
+    target_rule: demand_argmax
+    relevant_range: 500.0
+    engagement_threshold: 0.3
+    dwell_time_s: 0.0
+    window: {type: count, size: 10}
+    use_interaction_weight: false
+  - id: engagement_aware_r1500_g05_d2
+    type: engagement_aware
+    target_rule: demand_argmax
+    relevant_range: 1500.0
+    engagement_threshold: 0.5
+    dwell_time_s: 2.0
+    window: {type: count, size: 10}
+    use_interaction_weight: false
+
+  # ---- offline optimal (sees the future; not a deployable method) ----
+  - id: oracle_a0
+    type: oracle
+    migration_penalty_weight: 0.0
+  - id: oracle_a1
+    type: oracle
+    migration_penalty_weight: 1.0
+  - id: oracle_a10
+    type: oracle
+    migration_penalty_weight: 10.0

@@ -1,0 +1,62 @@
+created_at: '2026-08-31T00:00:00Z'
+dataset_prefix: small
+entities:
+  count: 3
+generator_version: 0.2.0
+interaction:
+  burst:
+    dominant_peer_ratio: 0.9
+    intervals:
+    - duration: 5.0
+      start: 20.0
+    - duration: 5.0
+      start: 45.0
+  concentrated:
+    dominant_peer_ratio: 0.75
+  model: poisson
+  rate_per_entity: 2.0
+  request_types:
+    attack:
+      probability: 1.0
+      weight: 1.0
+  shifting:
+    dominant_peer_ratio: 0.85
+    phase_duration: 20.0
+migration:
+  state_size_bytes: 4096
+network:
+  heterogeneous_rtt_max_ms: 200.0
+  heterogeneous_rtt_min_ms: 10.0
+  homogeneous_rtt_max_ms: 40.0
+  homogeneous_rtt_min_ms: 20.0
+  model: heterogeneous
+  symmetric: true
+output_root: datasets
+peers:
+  count: 10
+  movement_model: random_walk
+  movement_speed: 2.0
+  position_sample_interval: 1.0
+processing:
+  delay_ms: 2.0
+scenario: concentrated
+seed: 1
+simulation:
+  duration: 60.0
+  timestep: 0.1
+suite:
+  scenarios:
+  - uniform
+  - concentrated
+  - shifting
+  - burst
+  seeds:
+  - 1
+  - 2
+  - 3
+validation:
+  distribution_absolute_tolerance: 0.05
+  distribution_sigma: 4.0
+world:
+  height: 1000.0
+  width: 1000.0

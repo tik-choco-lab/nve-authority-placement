@@ -1,0 +1,13 @@
+rate_per_entity,dominant_peer_ratio,best_follower,best_baseline,n_seeds,mean_diff_combined_s,bootstrap_ci95_low,bootstrap_ci95_high,verdict
+0.5,0.85,follow_w10_d0.0,nearest,30,3.684910,0.630491,6.853466,follower_loses
+0.5,0.4,follow_w10_d2.0,nearest,30,10.648133,8.539059,12.792772,follower_loses
+0.5,0.3,follow_w10_d2.0,nearest,30,9.984980,7.829363,12.164061,follower_loses
+0.5,0.25,follow_w10_d2.0,nearest,30,9.790004,7.715722,11.951282,follower_loses
+2.0,0.85,follow_w10_d0.0,nearest,30,-156.678651,-165.220084,-148.056333,follower_wins
+2.0,0.4,follow_w10_d0.25,nearest,30,-31.407391,-38.485541,-24.334821,follower_wins
+2.0,0.3,follow_w10_d1.0,nearest,30,-3.023190,-10.579676,4.505133,not_significant
+2.0,0.25,follow_w10_d2.0,nearest,30,7.773359,0.711125,14.910632,follower_loses
+8.0,0.85,follow_w10_d0.0,nearest,30,-899.124846,-930.393024,-868.277183,follower_wins
+8.0,0.4,follow_w10_d1.0,nearest,30,-299.611416,-327.169207,-272.630207,follower_wins
+8.0,0.3,follow_w10_d1.0,nearest,30,-170.037732,-197.955580,-142.590253,follower_wins
+8.0,0.25,follow_w10_d1.0,nearest,30,-99.798382,-127.647579,-72.716775,follower_wins

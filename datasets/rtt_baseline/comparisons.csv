@@ -1,0 +1,15 @@
+dominant_peer_ratio,policy_a,policy_b,n_seeds,mean_diff_combined_s,bootstrap_ci95_low,bootstrap_ci95_high,verdict
+0.85,lowest_rtt_w10,nearest,30,-172.665990,-180.762629,-164.572539,a_cheaper
+0.85,lowest_rtt_w10,proposed_d0.0,30,-15.987338,-17.924141,-14.097391,a_cheaper
+0.7,lowest_rtt_w10,nearest,30,-123.365441,-130.929737,-115.758990,a_cheaper
+0.7,lowest_rtt_w10,proposed_d0.0,30,-1.389042,-4.142701,1.255252,not_significant
+0.6,lowest_rtt_w10,nearest,30,-90.055620,-97.716397,-82.714009,a_cheaper
+0.6,lowest_rtt_w10,proposed_d0.0,30,6.171567,3.768939,8.362517,a_worse
+0.5,lowest_rtt_w20,nearest,30,-60.171583,-68.684500,-52.066168,a_cheaper
+0.5,lowest_rtt_w20,proposed_d0.0,30,3.448461,-0.716723,7.659158,not_significant
+0.4,lowest_rtt_w100,nearest,30,-49.222370,-58.853446,-39.618894,a_cheaper
+0.4,lowest_rtt_w100,proposed_d0.25,30,-17.814979,-25.905523,-9.981463,a_cheaper
+0.3,lowest_rtt_w100,nearest,30,-45.606195,-55.723877,-35.831570,a_cheaper
+0.3,lowest_rtt_w100,proposed_d1.0,30,-42.583005,-51.321034,-34.347208,a_cheaper
+0.25,lowest_rtt_w100,nearest,30,-45.743382,-55.718955,-36.048186,a_cheaper
+0.25,lowest_rtt_w100,proposed_d1.0,30,-54.652707,-63.221968,-46.409736,a_cheaper

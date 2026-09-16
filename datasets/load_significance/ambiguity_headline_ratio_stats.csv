@@ -1,0 +1,9 @@
+n_seeds,quantity,per_seed_mean,per_seed_std,per_seed_ci95_low,per_seed_ci95_high,aggregate_ratio_of_means
+5,theta_D 0->1 migration reduction,0.612722,,0.599118,0.626325,0.612762
+30,theta_D 0->1 migration reduction,0.594023,0.019718,0.586661,0.601385,0.594645
+5,theta_D 0->1 latency increase,0.019189,,-0.003287,0.041665,0.019423
+30,theta_D 0->1 latency increase,0.020855,0.013578,0.015785,0.025925,0.020766
+5,theta_D 0->2 migration reduction,0.729721,,0.717186,0.742256,0.729895
+30,theta_D 0->2 migration reduction,0.716295,0.016095,0.710286,0.722304,0.716850
+5,theta_D 0->2 latency increase,0.045560,,0.016520,0.074599,0.046039
+30,theta_D 0->2 latency increase,0.046639,0.017892,0.039958,0.053319,0.046516

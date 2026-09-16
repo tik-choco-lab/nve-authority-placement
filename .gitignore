@@ -1,0 +1,77 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+
+# Tool caches
+.pytest_cache/
+.matplotlib/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+
+# Environment/secrets
+.env
+.env.*
+
+# Editors
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Derived dataset figures (regenerate with `nve-dataset visualize <dataset>`).
+# input/, manifest.json, summary.json and validation.json ARE tracked.
+datasets/**/analysis/figures/
+
+# Per-request policy replay output (derived; regenerate with `nve-policy replay`).
+# metrics.json and policy_comparison.csv ARE tracked - they are the actual numbers.
+datasets/**/output/*/results.csv
+datasets/**/output/*/decisions.csv
+
+# Switching-interval sweep datasets (30 of them; regenerate with
+# `uv run python experiments/switching_sweep.py`, which is deterministic in the
+# seed). Only the aggregated numbers under datasets/switching/*.csv are tracked,
+# because those are what the paper cites.
+datasets/switching/phase_*/
+datasets/ambiguity/ratio_*/
+
+# Range sweep (theta_R / peers.target_coupling) raw datasets; regenerate with
+# `uv run python experiments/range_sweep.py`. sweep_summary.csv,
+# sweep_aggregate.csv, reason_codes.csv and coupling_check.csv ARE tracked.
+datasets/range/coupled/
+datasets/range/uncoupled/
+
+# Read-only report outputs (regenerate in under a second with
+# `uv run python -m experiments.ambiguity_30seed_report`). The expensive sweep
+# aggregates next to them ARE tracked; these are derived from those.
+datasets/ambiguity/theta_d_table_ratio025_30seed.csv
+datasets/ambiguity/headline_pct_ci_ratio025.csv
+datasets/ambiguity/migration_floor_gap_5v30.csv
+datasets/ambiguity/quoted_numbers_materiality_check.csv
+
+# Request-rate arm of the boundary-sensitivity sweep and the shared-dominant-peer
+# load workload; regenerate with `uv run python -m experiments.boundary_sensitivity`
+# and `... -m experiments.shared_dominant`, both deterministic in the seed. Only
+# the aggregated CSVs beside them are tracked.
+datasets/boundary/rate_*/
+datasets/shared_dominant/distinct/
+datasets/shared_dominant/shared/
+
+# Standalone generated artifacts
+figures/
+datasets/load_significance/concentrated/
+*.pdf

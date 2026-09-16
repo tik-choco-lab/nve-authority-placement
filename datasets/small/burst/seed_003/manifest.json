@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-08-31T00:00:00Z",
+  "dataset_id": "small-burst-seed-003",
+  "dataset_kind": "controlled synthetic workload",
+  "duration": 60.0,
+  "entity_count": 3,
+  "generator_version": "0.2.0",
+  "input_sha256": {
+    "entities.csv": "6c963ce7143a2afdbd23a5d9bb3fceb49c109e3ed0b9aaadbd70ad9b08b1c65d",
+    "interactions.csv": "c82bae73cb0322af72df6ce225556a83872f4b6d6eb01ea246e0bb98b83687aa",
+    "network.csv": "c714369637cd1bef96b47e314487b47843b771f1e0251721450eb39e8d84b8e4",
+    "peer_positions.csv": "b69550794699bdc90f9d1d4f8587388ed6539edc913b4b7db0610d6af97d7d72",
+    "peers.csv": "0b9d7c0ced92d348f791f70b36b510e82a20c71bbd6eb2f3fa6059217f658f75",
+    "request_types.csv": "fac7e96b3404c3300541b57f6e74677025cfc673c899863fac984c1dff12c103"
+  },
+  "interaction_model": "poisson",
+  "interaction_rate_per_entity": 2.0,
+  "movement_model": "random_walk",
+  "network_model": "heterogeneous",
+  "peer_count": 10,
+  "position_sample_count": 61,
+  "position_sample_interval": 1.0,
+  "processing_delay_ms": 2.0,
+  "rtt_range_ms": [
+    10.0,
+    200.0
+  ],
+  "scenario": "burst",
+  "scenario_parameters": {
+    "burst_intervals": [
+      {
+        "end": 25.0,
+        "start": 20.0
+      },
+      {
+        "end": 50.0,
+        "start": 45.0
+      }
+    ],
+    "dominant_peer_by_entity": {
+      "E0001": "P0010",
+      "E0002": "P0004",
+      "E0003": "P0006"
+    },
+    "dominant_peer_ratio": 0.9
+  },
+  "seed": 3,
+  "state_size_bytes": 4096,
+  "timestep": 0.1
+}

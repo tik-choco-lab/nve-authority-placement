@@ -1,0 +1,90 @@
+generator_version: "0.2.0"
+# Kept explicit (instead of wall-clock time) so regeneration is byte-for-byte stable.
+created_at: "2026-08-31T00:00:00Z"
+output_root: datasets
+dataset_prefix: small
+
+simulation:
+  duration: 60.0
+  timestep: 0.1              # mobility integration step
+
+world:
+  width: 1000.0
+  height: 1000.0
+
+peers:
+  count: 10
+  movement_model: random_walk  # static | random_walk
+  movement_speed: 2.0
+  # How often positions are RECORDED (must be a multiple of simulation.timestep).
+  # The walk still advances every timestep; this only controls trace resolution.
+  # `static` peers record a single sample at t=0.
+  position_sample_interval: 1.0
+  # OPT-IN, OFF by default. Couples interaction locality (which peer a
+  # scenario currently calls an entity's "dominant" peer) to spatial locality
+  # (where that peer's random walk actually is): each random-walk step of a
+  # peer that is CURRENTLY dominant for one or more entities heads straight at
+  # the centroid of those entities' positions with probability
+  # `bias_probability`, instead of a uniform-random heading. Everything else
+  # (speed, boundary reflection) is unchanged. With `enabled: false` (or this
+  # section absent, as in every dataset generated before this option existed)
+  # generation is byte-for-byte identical to the plain random walk above -
+  # see nve_dataset/mobility/models.py and docs/DATASET_DESIGN.md section 6.
+  # Only meaningful with movement_model: random_walk (static peers do not
+  # move, so there is nothing to bias - enabling this with movement_model:
+  # static is a ValueError).
+  target_coupling:
+    enabled: false
+    # bias_probability: 0.9   # required (no hidden default) when enabled: true, must be in [0, 1]
+
+entities:
+  count: 3
+
+migration:
+  state_size_bytes: 4096
+
+interaction:
+  model: poisson              # poisson | fixed_interval
+  rate_per_entity: 2.0        # requests/second/entity
+  # Minimal default: a single request type (see docs/DATASET_DESIGN.md section 10).
+  # interaction_weight is a research variable and lives in input/request_types.csv,
+  # NOT in the interaction trace, so weights can change without regenerating the trace.
+  request_types:
+    attack:
+      probability: 1.00
+      weight: 1.0
+  # Example of a richer mix (probabilities must sum to 1.0):
+  #   attack:   {probability: 0.70, weight: 1.0}
+  #   observe:  {probability: 0.15, weight: 0.2}
+  #   heal:     {probability: 0.10, weight: 1.0}
+  #   interact: {probability: 0.05, weight: 0.5}
+  concentrated:
+    dominant_peer_ratio: 0.75
+  shifting:
+    phase_duration: 20.0
+    dominant_peer_ratio: 0.85
+  burst:
+    dominant_peer_ratio: 0.90
+    intervals:
+      - {start: 20.0, duration: 5.0}
+      - {start: 45.0, duration: 5.0}
+
+network:
+  model: heterogeneous        # homogeneous | heterogeneous
+  homogeneous_rtt_min_ms: 20.0
+  homogeneous_rtt_max_ms: 40.0
+  heterogeneous_rtt_min_ms: 10.0
+  heterogeneous_rtt_max_ms: 200.0
+  symmetric: true
+
+# Evaluation constants are recorded but never used to choose an authority.
+processing:
+  delay_ms: 2.0
+
+validation:
+  distribution_sigma: 4.0
+  distribution_absolute_tolerance: 0.05
+
+suite:
+  scenarios: [uniform, concentrated, shifting, burst]
+  seeds: [1, 2, 3]

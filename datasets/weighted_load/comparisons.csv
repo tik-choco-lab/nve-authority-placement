@@ -1,0 +1,13 @@
+dominant_peer_ratio,policy_a,policy_b,n_seeds,mean_diff_imbalance,bootstrap_ci95_low,bootstrap_ci95_high,verdict
+0.85,demand_argmax_w10_d0,static,30,-4.672263,-5.470035,-3.918840,a_less_imbalanced
+0.85,demand_argmax_w10_d0,nearest,30,-5.088356,-5.881777,-4.355691,a_less_imbalanced
+0.85,demand_argmax_w5_d0,static,30,-4.675818,-5.475523,-3.918296,a_less_imbalanced
+0.85,demand_argmax_w5_d0,nearest,30,-5.091912,-5.889828,-4.357901,a_less_imbalanced
+0.85,rtt_weighted_w5_d0,static,30,-4.134856,-4.941485,-3.380245,a_less_imbalanced
+0.85,rtt_weighted_w5_d0,nearest,30,-4.550950,-5.363907,-3.787308,a_less_imbalanced
+0.25,demand_argmax_w10_d0,static,30,-4.126852,-4.925212,-3.370559,a_less_imbalanced
+0.25,demand_argmax_w10_d0,nearest,30,-4.542946,-5.333309,-3.809762,a_less_imbalanced
+0.25,demand_argmax_w5_d5,static,30,-1.290954,-2.264853,-0.341584,a_less_imbalanced
+0.25,demand_argmax_w5_d5,nearest,30,-1.707047,-2.620160,-0.848005,a_less_imbalanced
+0.25,rtt_weighted_w100_d1,static,30,4.465832,2.970052,6.076292,a_more_imbalanced
+0.25,rtt_weighted_w100_d1,nearest,30,4.049738,2.455679,5.730098,a_more_imbalanced

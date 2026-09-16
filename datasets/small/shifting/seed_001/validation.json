@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "entity_count": 3,
+    "interaction_count": 358,
+    "peer_count": 10,
+    "scenario_distribution_expected": 0.85,
+    "scenario_distribution_observed": 0.8687150837988827,
+    "scenario_distribution_sample_size": 358
+  },
+  "errors": [],
+  "valid": true,
+  "warnings": []
+}
