@@ -1,0 +1,219 @@
+{
+  "0.85": {
+    "weighted_id": "rtt_weighted_w5_d0",
+    "weighted_spec": {
+      "id": "rtt_weighted_w5_d0",
+      "type": "engagement_aware",
+      "target_rule": "rtt_weighted",
+      "engagement_threshold": 0.0,
+      "dwell_time_s": 0.0,
+      "relevant_range": 1000000000.0,
+      "window": {
+        "type": "count",
+        "size": 5
+      },
+      "use_interaction_weight": false
+    },
+    "argmax_id": "demand_argmax_w5_d0",
+    "argmax_spec": {
+      "id": "demand_argmax_w5_d0",
+      "type": "engagement_aware",
+      "target_rule": "demand_argmax",
+      "engagement_threshold": 0.0,
+      "dwell_time_s": 0.0,
+      "relevant_range": 1000000000.0,
+      "window": {
+        "type": "count",
+        "size": 5
+      },
+      "use_interaction_weight": false
+    },
+    "baseline_id": "nearest"
+  },
+  "0.7": {
+    "weighted_id": "rtt_weighted_w10_d0",
+    "weighted_spec": {
+      "id": "rtt_weighted_w10_d0",
+      "type": "engagement_aware",
+      "target_rule": "rtt_weighted",
+      "engagement_threshold": 0.0,
+      "dwell_time_s": 0.0,
+      "relevant_range": 1000000000.0,
+      "window": {
+        "type": "count",
+        "size": 10
+      },
+      "use_interaction_weight": false
+    },
+    "argmax_id": "demand_argmax_w5_d0",
+    "argmax_spec": {
+      "id": "demand_argmax_w5_d0",
+      "type": "engagement_aware",
+      "target_rule": "demand_argmax",
+      "engagement_threshold": 0.0,
+      "dwell_time_s": 0.0,
+      "relevant_range": 1000000000.0,
+      "window": {
+        "type": "count",
+        "size": 5
+      },
+      "use_interaction_weight": false
+    },
+    "baseline_id": "nearest"
+  },
+  "0.6": {
+    "weighted_id": "rtt_weighted_w10_d0.25",
+    "weighted_spec": {
+      "id": "rtt_weighted_w10_d0.25",
+      "type": "engagement_aware",
+      "target_rule": "rtt_weighted",
+      "engagement_threshold": 0.0,
+      "dwell_time_s": 0.25,
+      "relevant_range": 1000000000.0,
+      "window": {
+        "type": "count",
+        "size": 10
+      },
+      "use_interaction_weight": false
+    },
+    "argmax_id": "demand_argmax_w10_d0",
+    "argmax_spec": {
+      "id": "demand_argmax_w10_d0",
+      "type": "engagement_aware",
+      "target_rule": "demand_argmax",
+      "engagement_threshold": 0.0,
+      "dwell_time_s": 0.0,
+      "relevant_range": 1000000000.0,
+      "window": {
+        "type": "count",
+        "size": 10
+      },
+      "use_interaction_weight": false
+    },
+    "baseline_id": "nearest"
+  },
+  "0.5": {
+    "weighted_id": "rtt_weighted_w10_d0.25",
+    "weighted_spec": {
+      "id": "rtt_weighted_w10_d0.25",
+      "type": "engagement_aware",
+      "target_rule": "rtt_weighted",
+      "engagement_threshold": 0.0,
+      "dwell_time_s": 0.25,
+      "relevant_range": 1000000000.0,
+      "window": {
+        "type": "count",
+        "size": 10
+      },
+      "use_interaction_weight": false
+    },
+    "argmax_id": "demand_argmax_w10_d0",
+    "argmax_spec": {
+      "id": "demand_argmax_w10_d0",
+      "type": "engagement_aware",
+      "target_rule": "demand_argmax",
+      "engagement_threshold": 0.0,
+      "dwell_time_s": 0.0,
+      "relevant_range": 1000000000.0,
+      "window": {
+        "type": "count",
+        "size": 10
+      },
+      "use_interaction_weight": false
+    },
+    "baseline_id": "nearest"
+  },
+  "0.4": {
+    "weighted_id": "rtt_weighted_w100_d0.25",
+    "weighted_spec": {
+      "id": "rtt_weighted_w100_d0.25",
+      "type": "engagement_aware",
+      "target_rule": "rtt_weighted",
+      "engagement_threshold": 0.0,
+      "dwell_time_s": 0.25,
+      "relevant_range": 1000000000.0,
+      "window": {
+        "type": "count",
+        "size": 100
+      },
+      "use_interaction_weight": false
+    },
+    "argmax_id": "demand_argmax_w10_d0.25",
+    "argmax_spec": {
+      "id": "demand_argmax_w10_d0.25",
+      "type": "engagement_aware",
+      "target_rule": "demand_argmax",
+      "engagement_threshold": 0.0,
+      "dwell_time_s": 0.25,
+      "relevant_range": 1000000000.0,
+      "window": {
+        "type": "count",
+        "size": 10
+      },
+      "use_interaction_weight": false
+    },
+    "baseline_id": "nearest"
+  },
+  "0.3": {
+    "weighted_id": "rtt_weighted_w100_d0.25",
+    "weighted_spec": {
+      "id": "rtt_weighted_w100_d0.25",
+      "type": "engagement_aware",
+      "target_rule": "rtt_weighted",
+      "engagement_threshold": 0.0,
+      "dwell_time_s": 0.25,
+      "relevant_range": 1000000000.0,
+      "window": {
+        "type": "count",
+        "size": 100
+      },
+      "use_interaction_weight": false
+    },
+    "argmax_id": "demand_argmax_w10_d1",
+    "argmax_spec": {
+      "id": "demand_argmax_w10_d1",
+      "type": "engagement_aware",
+      "target_rule": "demand_argmax",
+      "engagement_threshold": 0.0,
+      "dwell_time_s": 1.0,
+      "relevant_range": 1000000000.0,
+      "window": {
+        "type": "count",
+        "size": 10
+      },
+      "use_interaction_weight": false
+    },
+    "baseline_id": "nearest"
+  },
+  "0.25": {
+    "weighted_id": "rtt_weighted_w100_d1",
+    "weighted_spec": {
+      "id": "rtt_weighted_w100_d1",
+      "type": "engagement_aware",
+      "target_rule": "rtt_weighted",
+      "engagement_threshold": 0.0,
+      "dwell_time_s": 1.0,
+      "relevant_range": 1000000000.0,
+      "window": {
+        "type": "count",
+        "size": 100
+      },
+      "use_interaction_weight": false
+    },
+    "argmax_id": "demand_argmax_w5_d5",
+    "argmax_spec": {
+      "id": "demand_argmax_w5_d5",
+      "type": "engagement_aware",
+      "target_rule": "demand_argmax",
+      "engagement_threshold": 0.0,
+      "dwell_time_s": 5.0,
+      "relevant_range": 1000000000.0,
+      "window": {
+        "type": "count",
+        "size": 5
+      },
+      "use_interaction_weight": false
+    },
+    "baseline_id": "nearest"
+  }
+}

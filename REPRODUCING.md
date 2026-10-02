@@ -65,6 +65,7 @@ inside this repository; set `NVE_FIGURES_DIR` to send them elsewhere.
 | §V-E | Oracle solves a different problem, not the same one better | `experiments.oracle_analysis` | `datasets/ambiguity/oracle_analysis_aggregate.csv` |
 | §V-F | Processing-load ordering is not noise | `experiments.load_significance` | `datasets/load_significance/*.csv` |
 | §V-F | One shared dominant peer reverses the load ordering | `experiments.shared_dominant` | `datasets/shared_dominant/*.csv` |
+| §V-H | History-free RTT-only (medoid) control vs tuned Weighted and the better baseline, seeds 1-30 and held-out 31-60 | `experiments.medoid_control` (replays `datasets/ambiguity`) | `datasets/medoid_control/medoid_results.csv` |
 | §V-G | theta_R needs interaction and space to be correlated | `experiments.range_sweep` | `datasets/range/sweep_aggregate.csv` |
 | §V-G | The demand window matters more than theta_D, but not for the boundary | `experiments.boundary_sensitivity` | `datasets/boundary/window_aggregate.csv` |
 

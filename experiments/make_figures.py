@@ -376,10 +376,10 @@ def fig_boundary_collapse(rows: list[dict[str, float]]) -> None:
                label=r"predicted: $\rho_{\mathrm{eff}}{=}1$")
 
     ax.set_xlabel(r"$\rho_{\mathrm{eff}} = (s-s_0)\,\lambda \tau / (\alpha m)$")
-    ax.set_ylabel("seed-paired margin,\nfollowing $-$ better baseline (s)")
+    ax.set_ylabel("seed-paired cost difference,\nArgmax $-$ better baseline (s)")
     ax.grid(True, alpha=0.3)
     # Inside the axes, not below: the direction of the y axis is already named
-    # in its label ("following - better baseline"), so the legend only needs
+    # in its label ("Argmax - better baseline"), so the legend only needs
     # to say which marker is which rate. upper right is empty in this data -
     # large rho_eff only ever co-occurs with a large NEGATIVE margin - so the
     # legend sits there instead of costing a strip of column height below the
