@@ -51,6 +51,9 @@ FIXED_PHASE_DURATION = 10.0  # the switching interval fig_switching_*.pdf hold c
 DWELL_ID_RE = re.compile(r"^engagement_g(\d\d)_d([0-9.]+)$")
 
 plt.rcParams.update({
+    # TrueType instead of Type 3 fonts, as required for IEEE Xplore PDFs.
+    "pdf.fonttype": 42,
+    "ps.fonttype": 42,
     "font.size": 8,
     "axes.labelsize": 8,
     "legend.fontsize": 7,
