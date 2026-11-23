@@ -36,6 +36,8 @@ uv run pytest
 ```
 
 The demonstration suite is smaller than the paper's experiment sweeps.
+The paper's RTT-based fixed placement, Rtt-Static, is the medoid control here
+(`experiments.medoid_control`, results in `datasets/medoid_control/`).
 
 ## Documentation
 

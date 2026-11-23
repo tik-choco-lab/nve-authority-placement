@@ -34,6 +34,8 @@ uv run pytest
 ```
 
 このデモ用データセットは、論文の実験で使う構成より小規模です。
+論文の RTT ベース固定配置 Rtt-Static は、このリポジトリの medoid control に当たります
+（`experiments.medoid_control`、結果は `datasets/medoid_control/`）。
 
 ## ドキュメント一覧
 
